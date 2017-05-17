@@ -20,8 +20,4 @@ saludarPerez("Julieta");
 saludarRomero("Jorge");
 
 /*Otro Ejemplo */ 
-    let makePrefixer = (prefixer) => {
-        return function union(resto_nombre){
-            console.log(`${prefixer}${resto_nombre}`)
-        }
-    }
+    const makePrefixer = prefixer => resto_nombre => console.log(`${prefixer}${resto_nombre}`)
