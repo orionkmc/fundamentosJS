@@ -1,27 +1,40 @@
+/*
 function suma(...numeros){
     return numeros.reduce(function reduce(acum, numero){
         acum += numero;
         return acum;
     }, 0);
 }
-
+*/
+const suma = (...numeros) => numeros.reduce( (acum, numero) => acum += numero );
+/*
 function dobles(...numeros){
     return numeros.map(function(numero){
         return numero * 2;
     });
 }
+*/
 
-function pares(...numeros){
+const dobles = (...numeros) => numeros.map(numero => numero *2);
+
+/*function pares(...numeros){
     return numeros.filter(function(numero){
         return numero % 2 == 0;
     }); 
-}
+}*/
+const pares = (...numeros) => numeros.filter(numero => numero % 2 == 0);
 
-function max(...numeros){
+/*function max(...numeros){
     let maximo = numeros[0];
     numeros.find(function(numero){
         (numero > maximo) ? maximo = numero : '';
     });
+    return maximo;
+}*/
+
+const max = (...numeros) => {
+    let maximo = numeros[0];
+    numeros.find( numero => { (numero > maximo) ? maximo = numero : '' })
     return maximo;
 }
 
